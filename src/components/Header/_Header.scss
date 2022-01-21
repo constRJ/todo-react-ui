@@ -1,0 +1,43 @@
+.todo {
+  &__header {
+    width: 100%;
+    h1 {
+      text-align: center;
+      color: var(--ngray-30);
+    }
+    .todo-form {
+      display: flex;
+      justify-content: center;
+      margin: 1.5rem 0;
+      &__group {
+        position: relative;
+        &--input-label {
+          position: absolute;
+          top: 50%;
+          left: 0%;
+          transform: translate(10%, -50%);
+          pointer-events: none;
+          color: var(--nsilver-70);
+          transition: font-size, color, transform 0.2s ease-in-out;
+          &.focusing {
+            font-size: 1.2rem;
+            font-family: OpenSans700;
+            color: var(--blue-70);
+            background-color: var(--nwhite-100);
+            transform: translate(10%, -160%);
+            padding: 0 0.5rem;
+          }
+        }
+        &--input {
+          outline: none;
+          height: 100%;
+          margin: 0 1.5rem 0 0;
+          transition: border 0.2s ease-in-out;
+          &:focus {
+            border: 2px solid var(--blue-50);
+          }
+        }
+      }
+    }
+  }
+}

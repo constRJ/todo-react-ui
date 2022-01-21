@@ -1,0 +1,14 @@
+@mixin RootColor {
+  @each $color, $shades in $color-theme {
+    @each $shade, $value in $shades {
+      --#{$color}-#{$shade}: #{$value};
+    }
+  }
+}
+@mixin PrimaryBtnHover {
+  transition: background-color, box-shadow, 0.2s ease-in-out;
+}
+@mixin PrimaryBoxShadow {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}

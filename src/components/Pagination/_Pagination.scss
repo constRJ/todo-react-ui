@@ -1,0 +1,14 @@
+.pagination {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 0;
+  &__item {
+    padding: 0.5rem;
+    cursor: pointer;
+    &.active {
+      background-color: var(--blue-50);
+      color: var(--nwhite-100);
+    }
+  }
+}

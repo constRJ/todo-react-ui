@@ -1,0 +1,49 @@
+.todo-list {
+  .todo-table {
+    width: 100%;
+    border-collapse: collapse;
+    &__thead {
+      &--row {
+        th {
+          &:nth-child(1) {
+            width: 30%;
+          }
+          &:nth-child(2) {
+            width: 25%;
+          }
+          &:nth-child(3) {
+            width: 45%;
+          }
+        }
+      }
+    }
+    &__tbody {
+      &--row {
+        td {
+          &:last-child {
+            display: flex;
+            justify-content: center;
+            button {
+              &:first-child {
+                margin: 0 1rem 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__thead,
+    &__tbody {
+      &--row {
+        text-align: center;
+        th,
+        td {
+          color: var(--ngray-30);
+          font-size: 1.4rem;
+          padding: 1.6rem 2.2rem;
+          border-bottom: 1px solid var(--nsilver-70);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.btn {
+  outline: none;
+  border-radius: inherit;
+  border-width: none;
+  border-color: none;
+  border-style: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  padding: inherit;
+  margin: inherit;
+}
+
+@each $colors, $shades in $color-theme {
+  @each $shade, $value in $shades {
+    @if $shade == 50 {
+      .btn-#{$colors}-#{$shade} {
+        background-color: $value;
+        color: var(--nwhite-100);
+        border-radius: 0.5rem;
+        padding: 1rem 2.4rem;
+        font-family: OpenSans500;
+        font-size: 1.2rem;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2),
+          0 2px 10px 0 rgba(0, 0, 0, 0.1);
+        &:hover {
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2),
+            0 4px 20px 0 rgba(0, 0, 0, 0.1);
+          @include PrimaryBtnHover;
+          @each $shade, $value in $shades {
+            @if $shade == 30 {
+              background-color: $value;
+            }
+          }
+        }
+      }
+    }
+    @if $shade == 30 {
+      .btn-#{$colors}-#{$shade} {
+        background-color: $value;
+        color: var(--nwhite-100);
+        border-radius: 0.5rem;
+        padding: 1rem 2.4rem;
+        font-family: OpenSans500;
+        font-size: 1.2rem;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2),
+          0 2px 10px 0 rgba(0, 0, 0, 0.1);
+        &:hover {
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2),
+            0 4px 20px 0 rgba(0, 0, 0, 0.1);
+          @include PrimaryBtnHover;
+          @each $shade, $value in $shades {
+            @if $shade == 10 {
+              background-color: $value;
+            }
+          }
+        }
+      }
+    }
+  }
+}
